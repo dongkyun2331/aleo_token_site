@@ -1,4 +1,8 @@
-import { Transaction, Transition, WalletAdapterNetwork } from "@demox-labs/aleo-wallet-adapter-base";
+import {
+  Transaction,
+  Transition,
+  WalletAdapterNetwork,
+} from "@demox-labs/aleo-wallet-adapter-base";
 import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
@@ -19,7 +23,8 @@ export const MintPublic = () => {
       publicKey!,
       WalletAdapterNetwork.Testnet,
       [mint_public_transition],
-      1000000, // set your desired fee
+      //1000000, // set your desired fee
+      amount,
       false
     );
 
